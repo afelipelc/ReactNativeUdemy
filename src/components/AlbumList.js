@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 
@@ -36,12 +36,14 @@ export default class AlbumList extends Component {
   }
 
   render() { 
-    console.log(this.state);
-
+    //console.log(this.state);
+    // al mostrar la galeria de albums, no es scrollable, se debe habilitar el scroll con 2 pasos:
+    //1) En lugar de un <View> se usa un ScrollView, primero importarlo
+    //2) poner el ScrollView como parent container
     return (
-      <View>
+      <ScrollView>
         {this.renderAlbums()} 
-      </View>
+      </ScrollView>
     );
   }
 }

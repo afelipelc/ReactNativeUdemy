@@ -13,9 +13,10 @@ import AlbumList from './src/components/AlbumList';
 // 2. Create a component
 //ESLint indica error por las llaves, no es un error, sino que esteticamente debe ser corto si 
 //solo se contiene una instrucción en la funcion
+//style: lex: 1 hace que le componente se expanda de acuerdo a la pantalla
 const App = () => //{
   (//return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Header headerText={'Albums'} />
       <AlbumList />
     </View>
